@@ -2,6 +2,7 @@ package edu.luc.cs271.wordcount;
 
 import static org.junit.Assert.*;
 
+import java.util.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +17,8 @@ public class TestWordCounter {
   @Before
   public void setUp() {
     // DONE create the SUT instance
-    this.count = count;
+    Map<String, Integer> map = new HashMap<String, Integer>();
+    count = new WordCounter(map);
   }
 
   @After
@@ -29,8 +31,7 @@ public class TestWordCounter {
   public void testGetCountEmpty() {
 
     // TODO verify that the SUT initially returns an empty map
-    assertTrue(aMap.isEmpty());
-
+    assertTrue(count.getCounts().isEmpty());
   }
 
   @Test
@@ -39,13 +40,11 @@ public class TestWordCounter {
     // TODO run the SUT on a specific String iterator with some repeated words,
     // then use assertions to verify the correct counts
     // do this for at least two words in the iterator and two not in the iterator
-    Iterator itr = Arrays.asList("hey", "hi", "hello", "world", "hello", "hi").iterator();
-    count.countWords(itr);
-    assertEquals(2, count.getCount("hello"));
-    assertEquals(2, count.getCount("hi"));
-    assertNotEquals(2, count.getCount("world"));
-    assertNotEquals(2, count.getCount("hey"));
-    assertNotEquals(1, count.getCount("bye"));
+    count.countWords(Arrays.asList("hi", "hello", "world", "okay").iterator());
 
+    assertEquals(count.getCount("hi"), 1);
+    assertEquals(count.getCount("hello"), 1);
+    assertNotEquals(count.getCount("good"), 1);
+    assertNotEquals(count.getCount("grief"), 1);
   }
 }
