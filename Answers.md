@@ -5,3 +5,4 @@
 
 
 ### What crucial role does the Iterator abstraction play in making `WordCounter` testable?
+

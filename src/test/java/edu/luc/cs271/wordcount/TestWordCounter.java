@@ -37,14 +37,14 @@ public class TestWordCounter {
   @Test
   public void testGetCountNonEmpty() {
 
-    // DONE run the SUT on a specific String iterator with some repeated words,
+    // TODO run the SUT on a specific String iterator with some repeated words,
     // then use assertions to verify the correct counts
     // do this for at least two words in the iterator and two not in the iterator
-    count.countWords(Arrays.asList("hi", "hello", "hello", "okay").iterator());
+    count.countWords(Arrays.asList("asdf", "oiu", "qwer", "oiu").iterator());
 
-    assertEquals(count.getCount("hi"), 1);
-    assertEquals(count.getCount("hello"), 2);
-    assertNotEquals(count.getCount("good"), 1);
-    assertNotEquals(count.getCount("grief"), 1);
+    assertEquals(count.getCount("asdf"), 1);
+    assertEquals(count.getCount("oiu"), 2);
+    // assertEquals(count.getCount("good"), 0);
+    // assertEquals(count.getCount("grief"), 0);
   }
 }
