@@ -24,14 +24,20 @@ public class WordCounter {
     // HINT to do this without a conditional, use the getOrDefault method
 
     int count = 0;
+    
     while (words.hasNext()) {
       String x = words.next();
       x.toLowerCase();
+      
       if (theMap.containsKey(x)) {
+        
         count = theMap.get(x);
         theMap.put(x, count + 1);
+        
       } else {
+        
         theMap.put(x, 1);
+        
       }
     }
   }
@@ -40,11 +46,7 @@ public class WordCounter {
   public int getCount(final String word) {
 
     // DONE
-    int count = 0;
-    if (theMap.containsKey(word)) {
-      count = theMap.get(word);
-      theMap.put(word, count);
-    } else theMap.put(word, 0);
+    int count = theMap.get(word);
     return count;
   }
 

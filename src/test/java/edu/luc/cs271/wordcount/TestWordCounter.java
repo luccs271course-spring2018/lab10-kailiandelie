@@ -9,9 +9,9 @@ import org.junit.Test;
 
 public class TestWordCounter {
 
-  // TODO complete this test class
+  // DONE complete this test class
 
-  // TODO declare a reference to the SUT (system under test), i.e., WordCounter
+  // DONE declare a reference to the SUT (system under test), i.e., WordCounter
   WordCounter count;
 
   @Before
@@ -30,20 +30,20 @@ public class TestWordCounter {
   @Test
   public void testGetCountEmpty() {
 
-    // TODO verify that the SUT initially returns an empty map
-    assertTrue(count.getCounts().isEmpty());
+    // DONE verify that the SUT initially returns an empty map
+    assertEquals(count.getCounts(), Collections.emptyMap());
   }
 
   @Test
   public void testGetCountNonEmpty() {
 
-    // TODO run the SUT on a specific String iterator with some repeated words,
+    // DONE run the SUT on a specific String iterator with some repeated words,
     // then use assertions to verify the correct counts
     // do this for at least two words in the iterator and two not in the iterator
-    count.countWords(Arrays.asList("hi", "hello", "world", "okay").iterator());
+    count.countWords(Arrays.asList("hi", "hello", "hello", "okay").iterator());
 
     assertEquals(count.getCount("hi"), 1);
-    assertEquals(count.getCount("hello"), 1);
+    assertEquals(count.getCount("hello"), 2);
     assertNotEquals(count.getCount("good"), 1);
     assertNotEquals(count.getCount("grief"), 1);
   }
