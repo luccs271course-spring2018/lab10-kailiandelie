@@ -13,6 +13,7 @@ public class TestWordCounter {
 
   // DONE declare a reference to the SUT (system under test), i.e., WordCounter
   WordCounter count;
+  Map<String, Integer> map;
 
   @Before
   public void setUp() {
@@ -40,11 +41,15 @@ public class TestWordCounter {
     // TODO run the SUT on a specific String iterator with some repeated words,
     // then use assertions to verify the correct counts
     // do this for at least two words in the iterator and two not in the iterator
-    count.countWords(Arrays.asList("asdf", "oiu", "qwer", "oiu").iterator());
-
-    assertEquals(count.getCount("asdf"), 1);
-    assertEquals(count.getCount("oiu"), 2);
-    // assertEquals(count.getCount("good"), 0);
-    // assertEquals(count.getCount("grief"), 0);
+    Iterator<String> test =  Arrays.asList("asdf", "oiu", "asdf").iterator();
+    
+    WordCounter wordCount = new WordCounter(map);
+    
+    wordCount.countWords(test);
+    
+    assertEquals(wordCount.getCount("asdf"), 2);
+    assertEquals(wordCount.getCount("oiu"), 1);
+    assertEquals(wordCount.getCount("qwer"), 0);
+    assertEquals(wordCount.getCount("ty"), 0);
   }
 }

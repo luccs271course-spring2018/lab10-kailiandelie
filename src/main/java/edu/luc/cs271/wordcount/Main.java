@@ -12,7 +12,7 @@ public class Main {
     // DONE complete this main program
     // 1. create a WordCounter instance
 
-    Map<String, Integer> map = new HashMap<>();
+    Map<String, Integer> map = new TreeMap<>();
     WordCounter count = new WordCounter(map);
     // 2. use this to count the words in the input
 
