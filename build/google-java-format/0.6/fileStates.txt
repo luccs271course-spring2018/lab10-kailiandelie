@@ -1,4 +1,4 @@
 src/main/java/edu/luc/cs271/wordcount/DescendingByCount.java,1510107867000000000,475,FORMATTED
-src/main/java/edu/luc/cs271/wordcount/Main.java,1510107794000000000,1449,FORMATTED
-src/test/java/edu/luc/cs271/wordcount/TestWordCounter.java,1510111042000000000,1315,FORMATTED
+src/main/java/edu/luc/cs271/wordcount/Main.java,1510114038000000000,1449,FORMATTED
+src/test/java/edu/luc/cs271/wordcount/TestWordCounter.java,1510120263000000000,1370,FORMATTED
 src/main/java/edu/luc/cs271/wordcount/WordCounter.java,1510111041000000000,1358,FORMATTED

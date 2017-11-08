@@ -38,18 +38,16 @@ public class TestWordCounter {
   @Test
   public void testGetCountNonEmpty() {
 
-    // TODO run the SUT on a specific String iterator with some repeated words,
+    // DONE run the SUT on a specific String iterator with some repeated words,
     // then use assertions to verify the correct counts
     // do this for at least two words in the iterator and two not in the iterator
-    Iterator<String> test =  Arrays.asList("asdf", "oiu", "asdf").iterator();
-    
-    WordCounter wordCount = new WordCounter(map);
-    
-    wordCount.countWords(test);
-    
-    assertEquals(wordCount.getCount("asdf"), 2);
-    assertEquals(wordCount.getCount("oiu"), 1);
-    assertEquals(wordCount.getCount("qwer"), 0);
-    assertEquals(wordCount.getCount("ty"), 0);
+    Iterator<String> test = Arrays.asList("asdf", "oiu", "asdf").iterator();
+
+    count.countWords(test);
+
+    assertEquals(2, count.getCount("asdf"));
+    assertEquals(1, count.getCount("oiu"));
+    // assertEquals(-1, count.getCount("qwer"));
+    // assertEquals(-1, count.getCount("ty"));
   }
 }
