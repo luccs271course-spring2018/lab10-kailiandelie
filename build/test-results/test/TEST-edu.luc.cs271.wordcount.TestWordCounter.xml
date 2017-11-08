@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.luc.cs271.wordcount.TestWordCounter" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-11-08T02:23:52" hostname="kkleinschmidt-lab008-5618519" time="0.002">
+  <properties/>
+  <testcase name="testGetCountNonEmpty" classname="edu.luc.cs271.wordcount.TestWordCounter" time="0.001"/>
+  <testcase name="testGetCountEmpty" classname="edu.luc.cs271.wordcount.TestWordCounter" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
