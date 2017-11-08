@@ -8,3 +8,4 @@ It would only return the last iterator becuase it refreshes the counter every ti
 
 ### What crucial role does the Iterator abstraction play in making `WordCounter` testable?
 
+It goes through each word one by one, which makes the methods run properly becuase strings are being inputed one at a time instead of all at once.
