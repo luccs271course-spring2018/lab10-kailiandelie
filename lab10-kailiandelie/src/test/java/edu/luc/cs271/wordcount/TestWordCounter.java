@@ -11,6 +11,7 @@ public class TestWordCounter {
   // TODO complete this test class
 
   // TODO declare a reference to the SUT (system under test), i.e., WordCounter
+  WordCounter count;
 
   @Before
   public void setUp() {
